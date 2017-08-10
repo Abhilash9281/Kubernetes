@@ -1,13 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: dd-deploy
+  name: ddd-deploy
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: ddemo
+        app: dddemo
     spec:
       containers:
       - name: my-ubuntu
