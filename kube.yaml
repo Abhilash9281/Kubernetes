@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dd-deploy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ddemo
+    spec:
+      containers:
+      - name: my-ubuntu
+        image: Localhost:5000/my-ubuntu
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
